@@ -162,7 +162,10 @@ class FGeotechGameModule : public FDefaultGameModuleImpl, FSelfRegisteringExec
 							AssetClass = Cast<UBlueprint>(Instance)->GeneratedClass;
 							if (AssetClass->IsChildOf(AActor::StaticClass()))
 							{
-								GEditor->GetEditorWorldContext().World();
+								UWorld* World = GEditor->GetEditorWorldContext().World();
+								World->SpawnActor(AssetClass);
+								World->SpawnActor(AssetClass);
+								World->SpawnActor(AssetClass);
 								World->SpawnActor(AssetClass);
 								UE_LOG(LogTemp, Error, TEXT("I'm a Blueprint Actor son and I'm spawning in the Editor World"));
 							}
@@ -181,7 +184,10 @@ class FGeotechGameModule : public FDefaultGameModuleImpl, FSelfRegisteringExec
 						UClass* AssetClass = Cast<UClass>(Instance);
 						if (AssetClass->IsChildOf(AActor::StaticClass()))
 						{
-							GEditor->GetEditorWorldContext().World();
+							UWorld* World = GEditor->GetEditorWorldContext().World();
+							World->SpawnActor(AssetClass);
+							World->SpawnActor(AssetClass);
+							World->SpawnActor(AssetClass);
 							World->SpawnActor(AssetClass);
 							UE_LOG(LogTemp, Error, TEXT("I'm an Actor son and I'm spawning in the Editor World"));
 						}
