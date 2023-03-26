@@ -27,7 +27,7 @@ void FBasePlugin_01Module::StartupModule()
 	}
 	aiv_adder_t SymbolAddressAdder = reinterpret_cast<aiv_adder_t>(FPlatformProcess::GetDllExport(Handle, TEXT("aiv_adder")));
 
-	UE_LOG(LogTemp, Warning, TEXT("GetString and Adder: %s $d"), UTF8_TO_TCHAR(SymbolAddressGetString()), SymbolAddressAdder(10, 20));
+	UE_LOG(LogTemp, Warning, TEXT("GetString and Adder: %s %d"), UTF8_TO_TCHAR(SymbolAddressGetString()), SymbolAddressAdder(10, 20));
 }
 
 void FBasePlugin_01Module::ShutdownModule()
