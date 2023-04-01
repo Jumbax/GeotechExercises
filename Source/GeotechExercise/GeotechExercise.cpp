@@ -1,12 +1,12 @@
 ﻿// Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "GeotechExercise.h"
-#include "Modules/ModuleManager.h"
-#include "Dummy003.h"
-#include "BasePlugin_01.h"
 #include "AssetRegistry/AssetRegistryModule.h"
-#include "Editor.h"
+#include "BasePlugin_01.h"
+#include "Dummy003.h"
 #include "DummyActor.h"
+#include "Editor.h"
+#include "Modules/ModuleManager.h"
 
 DEFINE_LOG_CATEGORY(LogGeotech)
 
@@ -64,7 +64,6 @@ class FGeotechGameModule : public FDefaultGameModuleImpl, FSelfRegisteringExec
 		return false;
 	}
 
-	
 	bool Exec(UWorld* World, const TCHAR* Cmd, FOutputDevice& Ar)
 	{
 		//Exercise_006: A command for your Module

@@ -38,6 +38,7 @@ public class BasePlugin_01 : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+				"UnrealEd"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
