@@ -12,8 +12,8 @@ public:
 	virtual void ShutdownModule() override;
 	void HelloWorld();
 	TSharedRef<SDockTab> SpawnNomadTab(const FSpawnTabArgs& TabSpawnArgs);
-	bool Exec(UWorld* InWorld, const TCHAR* Cmd, FOutputDevice& Ar) override;
 	void TextCommited(const FText& InText, ETextCommit::Type InCommitType);
 	FReply OnButtonClicked();
 	FText ClassName;
+	void OnValueChanged(float Value);
 };
