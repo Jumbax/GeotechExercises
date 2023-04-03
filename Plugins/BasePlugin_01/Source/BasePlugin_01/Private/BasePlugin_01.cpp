@@ -77,7 +77,6 @@ TSharedRef<SDockTab> FBasePlugin_01Module::SpawnNomadTab(const FSpawnTabArgs& Ta
 			]
 			+SVerticalBox::Slot().AutoHeight()
 			[
-				//SNew(SSlider).OnValueChanged_Raw(this, &FBasePlugin_01Module::OnValueChanged)
 				SNew(SSlider).MinValue(0).MaxValue(10).OnValueChanged_Raw(this, &FBasePlugin_01Module::OnValueChanged)
 			]
 	];
